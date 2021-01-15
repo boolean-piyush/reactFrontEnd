@@ -1,26 +1,37 @@
-.mainPage{
-  background-color: lightseagreen;
-  border-radius: 10px;
-  /* background: #73AD21; */
+.mainPage {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border: 1px;
+  border-radius: 25px;
+}
+.myinput {
+  padding-left: 20px;
+  text-align: center;
 }
 
-#Vector_16, #Vector_15, #Vector_17{
+#Vector_16,
+#Vector_15,
+#Vector_17 {
   animation: cardColorWave ease-in-out infinite alternate;
   animation-duration: 2s;
   animation-delay: 0s;
   transform-origin: left;
   transform-box: fill-box;
 }
-#Vector_17{
+#Vector_17 {
   animation: tickColorChange ease-in-out infinite alternate;
   animation-duration: 2s;
   animation-delay: 0s;
   transform-origin: left;
   transform-box: fill-box;
 }
-@keyframes tickColorChange{
+@keyframes tickColorChange {
   from {
-    fill:purple;
+    fill: purple;
     transform: scaleX(0.9);
   }
   to {
@@ -29,23 +40,23 @@
   }
 }
 
-@keyframes cardColorWave{
+@keyframes cardColorWave {
   from {
     transform: scaleX(0.5);
-    fill:purple;
+    fill: purple;
   }
   to {
     transform: scaleX(1.1);
     fill: green;
   }
 }
-#looseHair{
+#looseHair {
   animation: hairWave ease-in-out infinite alternate;
   animation-duration: 1s;
   animation-delay: 0s;
   transform-origin: 40% 50%;
 }
-@keyframes hairWave{
+@keyframes hairWave {
   from {
     transform: rotateX(0deg) rotateZ(0deg);
   }
@@ -53,28 +64,30 @@
     transform: rotateX(25deg) rotateY(10deg) rotateZ(1.5deg);
   }
 }
-.notes{
-  font-family: 'Dancing Script', cursive;
+.todos {
+  font-family: "Dancing Script", cursive;
   font-size: 25px;
+  font-weight: 700;
+  /* color: white; */
 }
 .anime {
   animation-name: cssAnimation;
-  animation-duration:1s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   /* transform-origin: initial; */
-  
+
   /* animation-fill-mode: forwards; */
 }
 @keyframes cssAnimation {
   from {
-    transform: translateY(-100px) rotate(0deg)
+    transform: translateY(-100px) rotate(0deg);
   }
   to {
     transform: translateY(1100px) rotate(100deg);
   }
 }
 
-.autocomplete{
+.autocomplete {
   width: 300px;
 }
