@@ -1,0 +1,108 @@
+.poster > img{
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 10px;
+    width: 100%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.poster:hover{
+    border-style: solid;
+    border-width: 5px;
+    border-color: green;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.poster{
+    user-select: none;
+}
+.poster > p{
+    display:none;
+}
+.poster > p > span{
+    font-size: 20px;
+}
+.poster:hover .genre{
+    font-weight: 900;
+    position: absolute;
+    top: 22%;
+    left: 33%;
+    display:block;
+}
+.poster:hover .image{
+    border-color: green;
+    opacity: 0.15;
+}
+.genre > button{
+    cursor: pointer;
+    background-color: rgba(76, 255, 31, 0.671);
+    border:none;
+    color: white;
+    font-size: 12px;
+    box-shadow: rgba(76, 255, 31, 20);
+    border-radius: 10px;
+}
+.movieContainer{
+    width:100%;
+    margin:auto;
+    text-align: center;
+}
+.movieDetail{
+    text-align: center;
+    font-weight: 800;
+    font-size: 14px;
+}
+body{
+    background-color: #171717;
+    color: white;
+}
+.pagination{
+    text-align: center;
+}
+#prev{
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    background-color: inherit;
+    border:none;
+    border-radius: 15px;
+    color:white;
+    box-shadow: 5px 8px 18px red;
+}
+#next{
+    cursor: pointer;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    background-color: inherit;
+    border:none;
+    border-radius: 15px;
+    color:white;
+    box-shadow: 5px 8px 18px red;
+}
+  
+  #prev > span {
+    animation: simple1 1s linear infinite;
+  }
+  
+  #next > span {
+    animation: simple 1s linear infinite;
+  }
+  @keyframes simple {
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes simple1 {
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

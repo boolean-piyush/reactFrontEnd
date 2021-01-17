@@ -13,6 +13,7 @@ body {
   perspective: 900px;
 }
 
+
 .container {
   position: absolute;
   top: 0%;
@@ -26,133 +27,23 @@ body {
 }
 
 #c0 {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  height: 100%;
   background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
-  z-index: 300;
-  box-shadow: 0px 20px 100px #555;
 }
 
 #c1 {
   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-  box-shadow: 0px 20px 100px #555;
   left: 100%;
-  z-index: 0;
 }
 
 #c2 {
   left: -100%;
-  z-index: 0;
   background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-  box-shadow: 0px 20px 100px #555;
 }
 
 .container:hover {
   cursor: pointer;
   transform: rotate(0deg) scale(1) translateY(10px);
   transition: .5s all ease;
-  z-index: 400;
-}
-
-.image {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 45%;
-  background: linear-gradient(to top, #eba65b 30%, #d99267 100%);
-}
-
-#i1 {
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-}
-
-#i2 {
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-}
-
-span {
-  position: absolute;
-  top: 0%;
-  left: 55%;
-  border-radius: 100%;
-  background-color: #fff;
-  z-index: 10;
-}
-
-.sun {
-  position: absolute;
-  top: 50%;
-  height: 50%;
-  left: 0%;
-  width: 100%;
-}
-
-.sun1 {
-  width: 50px;
-  height: 50px;
-  box-shadow: 0px 0px 10px #fff;
-}
-
-.st4 {
-  fill: #f8c56f;
-  opacity: 1;
-}
-
-.st5,
-.st7 {
-  fill: #fff;
-}
-
-#sh2 {
-  opacity: 0.5;
-}
-
-#sh3 {
-  opacity: 0.3;
-}
-
-.st6 {
-  fill: #59476f;
-}
-
-.st10 {
-  fill: #c5a7e5;
-  stroke: #222;
-}
-
-.st11 {
-  stroke: #212121;
-  opacity: 0.5;
-}
-
-#sh1 {
-  fill: #f8c56f;
-  opacity: 0.4;
-}
-
-.st0 {
-  fill: #a25a62;
-  stroke: none;
-  stroke-miterlimit: 10;
-}
-
-.st1 {
-  fill: none;
-  stroke: #a25a62;
-  stroke-width: 2;
-  stroke-miterlimit: 10;
-}
-
-.st2 {
-  fill: #cd775c;
-}
-
-.st3 {
-  fill: #fff;
-  opacity: 0.3;
 }
 
 .story {
@@ -238,11 +129,11 @@ li:nth-child(2) {
 
 @keyframes simple {
   50% {
-    transform: translateX(10px);
+    transform: translateX(-10px);
     opacity: 0.5;
   }
   100% {
-    transform: translateX(10px);
+    transform: translateX(-10px);
     opacity: 0;
   }
 }
@@ -266,4 +157,44 @@ li:nth-child(2) {
   100% {
     top: 0%;
   }
+}
+
+.spaceship {
+  position: absolute;
+  right: 0%;
+  top:0%;
+  width: 250px;
+  height: 100px;
+  
+}
+.spaceshipFly{
+  animation: flyingSaucer 5s ease-in-out 1;
+}
+@keyframes flyingSaucer{
+  0% {
+    top:0px;
+    right:0px;
+  }
+  40%{
+    top: 20%;
+    right: 80%;
+  }
+  70%{
+    top: 80%;
+    right: 75%;
+  }
+  100% {
+    top: 70%;
+    right: 50%;
+  }
+}
+#LaserRain, #surprisedHuman, #takenHuman{
+  display: none;
+}
+button{
+width: 100%;
+border: none;
+border-radius: 20px;
+box-shadow: 50px 50px 50px rgb(255, 255, 255);
+background: rgba(255, 255, 255, 0.2);
 }
