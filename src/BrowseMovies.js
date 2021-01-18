@@ -22,7 +22,7 @@ function Cards() {
   xhttp.setRequestHeader("Authorization", "Bearer " + accessToken);
   xhttp.send();
   return (
-    <div className="ui container">
+    <div className="moviePage ui container">
       <div className="ui fluid icon input">
       <i className="search icon"></i>
         <input
@@ -38,7 +38,7 @@ function Cards() {
         />
       </div>
       <br />
-      <MovieLayout jsonData={data} /> <hr/>
+      <MovieLayout jsonData={data} /> <hr/><br/>
       <div className="pagination">
       <button id="prev" type="button" onClick={()=>(page===1?true:setpage(page-1))}> <span>{"<<<"}</span> Previous</button>
       <button id="next" type="button" onClick={()=>setpage(page+1)}>Next <span>{">>>"}</span></button>

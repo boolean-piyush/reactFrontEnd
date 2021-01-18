@@ -1,72 +1,94 @@
 import React from "react";
 import "./stylesheets/HoverCardEffect.css";
-import { ReactComponent as Glitter } from "./images/glitter.svg";
-import { ReactComponent as Taken } from "./images/alienAbduction.svg";
+// import { ReactComponent as Taken } from "./images/alienAbduction.svg";
+import coder from "./images/coder.png";
+import movieNight from "./images/movieNight.svg";
+import todoSVG from "./images/todoSVG.png";
+import piyush from "./images/piyush-passport-new.jpg";
 
 function HoverCard() {
-  const ref = React.useRef(null);
+  const names = [
+    {
+      name: movieNight,
+      heading: "Browse Movies",
+      subHeading: "Rest API with React",
+      description: "Search any movies. Watch rating, votes and popularity with Rest API and React.",
+      link:"/browse-movies",
+      target:""
+    },
+    {
+      name: todoSVG,
+      heading: "Make To-Do List",
+      subHeading: "React, CSS and Javascript",
+      description: "Responsive todo list with CSS animations and React Javascript",
+      link:"/todo-app",
+      target:""
+    },
+    {
+      name: coder,
+      heading: "Github Repository",
+      subHeading: "Github",
+      description: "Github link to source code linked to AWS Amplify Cloud.",
+      link:"https://github.com/boolean-piyush/reactFrontEnd",
+      target:"_blank"
+    },
+    {
+      name: piyush,
+      heading: "Piyush Ratan",
+      subHeading: "Born 1995",
+      description: "I am a Full Stack Website developer living in Lucknow.",
+      link:"",
+      target:""
+    },
+  ];
 
-  function setClassToFly(){
-      ref.current.setAttribute('class', 'spaceship spaceshipFly');
-      setTimeout(() => {
-        ref.current.setAttribute('class', 'spaceship');
-      }, 5000);
-  }
+  const Com = () => {
+    let len = names.length;
+    var temp = [];
+    for (let index = 0; index < len; index++) {
+      const element = names[index];
+      temp.push(
+        <div
+          key={index}
+          className="eight wide mobile five wide tablet four wide computer column"
+        >
+          <div className="card">
+            
+            <img
+              className="image"
+              width="100%"
+              height="200px"
+              src={element.name}
+              alt="cardImage"
+            />
+
+            <div className="content">
+              {/* <Glitter className="glitter"/> */}
+              <h3>{element.heading}</h3>
+              <a className="subHeading" href={element.link!==""?element.link:null} target={element.target}>Click Here</a>
+              <p>{element.description}</p>
+            </div>
+
+            <div className="socialDetail">
+              <p className="joined"><i className="calendar icon"></i>Jan 2021</p>
+              <p className="friends">
+                <i className="user icon"></i>Born 1995
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return temp;
+  };
 
   return (
-    <div>
-      <Taken ref={ref} className="spaceship"></Taken>
-      <div className="wrapper">
-        <Glitter></Glitter>
-        <div className="container" id="c0">
-          <div className="story" id="s0">
-            <div className="info">
-              <h3>Pyramids</h3>
-              <p>
-                Built during a time when Egypt was one of the richest and most
-                powerful civilizations in the world. Their massive scale
-                reflects the unique role that the pharaoh played in ancient
-                Egyptian society.
-              </p>
-              <button type="button" onClick={function(){setClassToFly()}}>Take me</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="container" id="c1">
-          <div className="story" id="s1">
-            <div className="info">
-              <h3>Stonehenge</h3>
-              <p>
-                Stonehenge is a prehistoric monument in Wiltshire, England. It
-                was constructed in several stages between 3000 and 1500 B.C.,
-                spanninng to the Bronze Age.
-              </p>
-              <button type="button" onClick={function(){setClassToFly()}}>Take me</button>
-            </div>
-          </div>
-        </div>
-        <div className="container" id="c2">
-          <div className="story" id="s2">
-            <div className="info">
-              <h3>Tower of Pisa</h3>
-              <p>
-                The Leaning Tower of Pisa or simply the Tower of Pisa is the
-                campanile, or freestanding bell tower, of the cathedral of the
-                Italian city of Pisa, known worldwide for its unintended tilt
-              </p>
-              <button type="button" onClick={function(){setClassToFly()}}>Take me</button>
-            </div>
-          </div>
-        </div>
-        <div className="page">
-          <h4>Hover the card</h4>
-          <ul>
-            <li>{"<<<"}</li>
-            <li>{">>>"}</li>
-          </ul>
-        </div>
+    <div className="ui container hoverCards">
+      <h1>CardOpedia</h1>
+      <div className="ui centered grid">
+        <Com />
       </div>
+      <br />
     </div>
   );
 }

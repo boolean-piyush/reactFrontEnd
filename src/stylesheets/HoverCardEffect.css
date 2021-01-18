@@ -1,200 +1,79 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
-body {
-  font-family: 'Raleway', sans-serif;
-  background:#eee;
+body{
+  background-color: #171717;
 }
 
-.wrapper {
-  position: absolute;
-  top: 10%;
-  left: 40%;
-  width: 300px;
-  height: 500px;
-  perspective: 900px;
-}
-
-
-.container {
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  transition: .5s all ease;
-  transform: rotateX(60deg) scale(0.7);
-  perspective: 900px;
-  box-shadow: 0px 20px 50px #555;
-  animation: entry 1s linear 1;
-}
-
-#c0 {
-  background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
-}
-
-#c1 {
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-  left: 100%;
-}
-
-#c2 {
-  left: -100%;
-  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-}
-
-.container:hover {
-  cursor: pointer;
-  transform: rotate(0deg) scale(1) translateY(10px);
-  transition: .5s all ease;
-}
-
-.story {
-  position: absolute;
-  top: 45%;
-  left: 0%;
-  height: 55%;
-  width: 100%;
-  background: linear-gradient(to bottom, #eba65b 0%, #d99267 40%);
-  z-index: 30;
-}
-
-#s1 {
-  background: linear-gradient(to top, #5b62a2 0%, #7b88d1 100%);
-}
-
-#s2 {
-  background: linear-gradient(to top, #5b62a2 0%, #7b88d1 120%);
-}
-
-.info {
-  position: absolute;
-  top: 10%;
-}
-
-h3 {
+h1{
   text-align: center;
-  text-shadow: 0px 0px 10px #eee;
-  color: #eee;
-  letter-spacing: 2px;
+  user-select: none;
+  color: white;
 }
 
-h4 {
-  color: #111;
+.column{
+  perspective: 400px;
+}
+
+.glitter{
   position: absolute;
-  top: 30%;
-  left: 30%;
-  letter-spacing: 2px;
+  top:42%;
 }
 
-h1 {
-  color: #111;
-  position: fixed;
-  top: 0%;
-  left: 30%;
-  letter-spacing: 2px;
+.card{
+  border:solid 2px rgb(255, 255, 255);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 20px 50px rgb(146, 139, 139);
+  background-color: rgb(223, 219, 219);
+  transition: .5s all ease;
+  transform: rotateX(40deg) scale(0.7);
+  user-select: none;
 }
 
-p {
-  font-size: 14px;
-  color: #fff;
-  padding: 0px 20px 20px 20px;
-  line-height: 150%;
-  text-align: center;
-  letter-spacing: 1px;
+
+.card:hover {
+  transform: rotate(0deg) scale(1) translateY(50px);
 }
 
-.page {
-  position: absolute;
-  top: 80%;
+.content{
+  padding-left: 2px;
+}
+
+.content > h3{
+  margin-bottom: -4px;
+}
+
+.subHeading{
+  opacity:0.8;
+  color:rgb(6, 150, 247);
+  font-size: 12px;
+  font-weight: 550;
+}
+.content > p{
+  margin-top:8px;
+  margin-bottom: 8px;
+}
+
+.socialDetail{
+  border-top:solid 1px rgba(124, 124, 124, 0.445);
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 700;
+}
+.socialDetail > .friends{
+  display: inline;
+  float: right;
+  padding-right: 2px;
+  padding-top: 2px;
+}
+.socialDetail > .joined{
+  display: inline;
+  float: left;
+  padding-left:2px ;
+  padding-top: 2px;
+}
+.image{
   width: 100%;
-  left: 0%;
-  height: 20%;
-  z-index: 30;
+  height: 200px;
 }
-
-li {
-  position: absolute;
-  top: 50%;
-  list-style: none;
-  color: #111;
-}
-
-li:nth-child(1) {
-  left: 15%;
-  animation: simple1 1s linear infinite;
-}
-
-li:nth-child(2) {
-  right: 15%;
-  animation: simple 1s linear infinite;
-}
-
-@keyframes simple {
-  50% {
-    transform: translateX(-10px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(-10px);
-    opacity: 0;
-  }
-}
-
-@keyframes simple1 {
-  50% {
-    transform: translateX(-10px);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(-10px);
-    opacity: 0;
-  }
-}
-
-@keyframes entry {
-  0% {
-    top: -20%;
-    opacity: 0.1;
-  }
-  100% {
-    top: 0%;
-  }
-}
-
-.spaceship {
-  position: absolute;
-  right: 0%;
-  top:0%;
-  width: 250px;
-  height: 100px;
-  
-}
-.spaceshipFly{
-  animation: flyingSaucer 5s ease-in-out 1;
-}
-@keyframes flyingSaucer{
-  0% {
-    top:0px;
-    right:0px;
-  }
-  40%{
-    top: 20%;
-    right: 80%;
-  }
-  70%{
-    top: 80%;
-    right: 75%;
-  }
-  100% {
-    top: 70%;
-    right: 50%;
-  }
-}
-#LaserRain, #surprisedHuman, #takenHuman{
-  display: none;
-}
-button{
-width: 100%;
-border: none;
-border-radius: 20px;
-box-shadow: 50px 50px 50px rgb(255, 255, 255);
-background: rgba(255, 255, 255, 0.2);
+#movieSVG{
+  background-color: turquoise;
 }
